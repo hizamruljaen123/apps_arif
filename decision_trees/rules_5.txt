@@ -1,0 +1,5 @@
+IF True AND Ketinggian Air Tanah (m) <= 2.05 AND Kecepatan Angin (km/jam) <= 8.50 THEN Aman
+IF True AND Ketinggian Air Tanah (m) <= 2.05 AND Kecepatan Angin (km/jam) > 8.50 AND Curah Hujan (mm/hari) <= 11.50 THEN Aman
+IF True AND Ketinggian Air Tanah (m) <= 2.05 AND Kecepatan Angin (km/jam) > 8.50 AND Curah Hujan (mm/hari) > 11.50 THEN Waspada
+IF True AND Ketinggian Air Tanah (m) > 2.05 AND Suhu (°C) <= 30.00 THEN Siaga
+IF True AND Ketinggian Air Tanah (m) > 2.05 AND Suhu (°C) > 30.00 THEN Awas

@@ -1,0 +1,4 @@
+IF True AND Curah Hujan (mm/hari) <= 35.00 AND Tinggi Muka Air Sungai (m) <= 2.50 THEN Aman
+IF True AND Curah Hujan (mm/hari) <= 35.00 AND Tinggi Muka Air Sungai (m) > 2.50 THEN Waspada
+IF True AND Curah Hujan (mm/hari) > 35.00 AND Kecepatan Angin (km/jam) <= 16.00 THEN Siaga
+IF True AND Curah Hujan (mm/hari) > 35.00 AND Kecepatan Angin (km/jam) > 16.00 THEN Awas

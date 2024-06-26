@@ -1,0 +1,4 @@
+IF True AND Ketinggian Air Tanah (m) <= 2.25 AND Curah Hujan (mm/hari) <= 33.50 AND Tinggi Muka Air Sungai (m) <= 2.50 THEN Aman
+IF True AND Ketinggian Air Tanah (m) <= 2.25 AND Curah Hujan (mm/hari) <= 33.50 AND Tinggi Muka Air Sungai (m) > 2.50 THEN Waspada
+IF True AND Ketinggian Air Tanah (m) <= 2.25 AND Curah Hujan (mm/hari) > 33.50 THEN Siaga
+IF True AND Ketinggian Air Tanah (m) > 2.25 THEN Awas

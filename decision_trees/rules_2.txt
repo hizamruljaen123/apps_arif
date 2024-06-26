@@ -1,0 +1,4 @@
+IF True AND Ketinggian Air Tanah (m) <= 2.25 AND Tinggi Muka Air Sungai (m) <= 2.35 THEN Aman
+IF True AND Ketinggian Air Tanah (m) <= 2.25 AND Tinggi Muka Air Sungai (m) > 2.35 AND Tinggi Muka Air Sungai (m) <= 2.95 THEN Waspada
+IF True AND Ketinggian Air Tanah (m) <= 2.25 AND Tinggi Muka Air Sungai (m) > 2.35 AND Tinggi Muka Air Sungai (m) > 2.95 THEN Siaga
+IF True AND Ketinggian Air Tanah (m) > 2.25 THEN Awas

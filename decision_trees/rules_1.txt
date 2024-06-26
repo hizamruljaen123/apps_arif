@@ -1,0 +1,4 @@
+IF True AND Kecepatan Angin (km/jam) <= 16.00 AND Curah Hujan (mm/hari) <= 35.00 AND Curah Hujan (mm/hari) <= 11.50 THEN Aman
+IF True AND Kecepatan Angin (km/jam) <= 16.00 AND Curah Hujan (mm/hari) <= 35.00 AND Curah Hujan (mm/hari) > 11.50 THEN Waspada
+IF True AND Kecepatan Angin (km/jam) <= 16.00 AND Curah Hujan (mm/hari) > 35.00 THEN Siaga
+IF True AND Kecepatan Angin (km/jam) > 16.00 THEN Awas
