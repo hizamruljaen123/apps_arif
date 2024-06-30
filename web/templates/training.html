@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>Decision Tree Training</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        {% include 'sidebar.html' %}
+
+        <!-- Main content -->
+        <main class="col-md-12 ms-sm-auto col-lg-12 px-md-12">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Decision Tree Training</h1>
+          </div>
+          
+          <div class="row">
+            <!-- Card with Training Data Button -->
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Training Data</h5>
+                  <p class="card-text">Click the button below to start training the decision tree model.</p>
+                  <button class="btn btn-primary" id="trainButton">Train Data</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Textarea for Training Log -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="logTextarea">Training Log:</label>
+                <textarea class="form-control" id="logTextarea" rows="10" readonly></textarea>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.getElementById('trainButton').addEventListener('click', function() {
+        var logTextarea = document.getElementById('logTextarea');
+        logTextarea.value += 'Training started...\n';
+
+        fetch('/train')
+          .then(response => response.json())
+          .then(data => {
+            data.forEach(log => {
+              logTextarea.value += log + '\n';
+            });
+          })
+          .catch(error => {
+            logTextarea.value += 'Error: ' + error + '\n';
+          });
+      });
+    </script>
+  </body>
+</html>

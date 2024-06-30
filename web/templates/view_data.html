@@ -15,17 +15,17 @@
         <!-- Main content -->
         <main class="col-md-12 ms-sm-auto col-lg-12 px-md-12">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Decision Tree Rules</h1>
+            <h1 class="mb-4">Show Data</h1>
           </div>
-          <div class="form-group">
-            <label for="rulesTextarea">Rules:</label>
-            <textarea class="form-control" id="rulesTextarea" rows="25" readonly>{{ rules }}</textarea>
-          </div>
+          
+      <div class="table-responsive" style="font-size: 11px;">
+        {{ data_table | safe }}
+      </div>
         </main>
       </div>
     </div>
 
-    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

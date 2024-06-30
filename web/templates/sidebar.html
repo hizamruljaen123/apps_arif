@@ -1,154 +1,170 @@
 <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: #f8f9fa;
-      color: #333;
-    }
-    
-    #sidebar {
-      height: 100vh;
-      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-      background: linear-gradient(to bottom, #343a40, #212529);
-    }
-    
-    #sidebar .nav-link {
-      font-size: 0.9rem;
-      padding: 15px 20px;
-      color: #ddd;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    
-    #sidebar .nav-link.active {
-      background-color: #495057;
-      color: #fff;
-    }
-    
-    #sidebar .nav-link:hover {
-      background-color: #495057;
-      color: #fff;
-    }
-    
-    .container-fluid {
-      padding-left: 0;
-    }
-    
-    .main-content {
-      padding: 25px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-left: 15px;
-    }
-    
-    .main-content h1 {
-      font-size: 1.75rem;
-      margin-bottom: 20px;
-      background: -webkit-linear-gradient(#343a40, #495057);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    .main-content .form-group {
-      margin-bottom: 20px;
-    }
-    
-    .table {
-      width: 100%;
-      margin-bottom: 1rem;
-      color: #333;
-      border-collapse: collapse;
-    }
-    
-    .table th,
-    .table td {
-      padding: 0.75rem;
-      vertical-align: top;
-      border-top: 1px solid #dee2e6;
-    }
-    
-    .table thead th {
-      vertical-align: bottom;
-      border-bottom: 2px solid #dee2e6;
-      background: linear-gradient(to right, #495057, #343a40);
-      color: #fff;
-    }
-    
-    .table tbody + tbody {
-      border-top: 2px solid #dee2e6;
-    }
-    
-    .table-sm th,
-    .table-sm td {
-      padding: 0.3rem;
-    }
-    
-    .text-gradient {
-      background: -webkit-linear-gradient(#343a40, #495057);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    textarea {
-      font-family: 'Courier New', Courier, monospace;
-      background: #e9ecef;
-      border: 1px solid #ced4da;
-      padding: 10px;
-      width: 100%;
-      border-radius: 4px;
-      resize: none;
-    }
-    
-    textarea:focus {
-      outline: none;
-      box-shadow: 0 0 5px rgba(52, 58, 64, 0.7);
-      border: 1px solid rgba(52, 58, 64, 0.7);
-    }
-    
-    
-             </style>
-            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" style="font-size: 12px !important;">
-              <div class="position-sticky pt-3">
-                <ul class="nav flex-column">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">
-                      Home
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/load_data">
-                      Load Data
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/train">
-                      Train Model
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/extract_rules">
-                      Extract Rules
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/view_rules">
-                      View Rules
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/view_trees">
-                      View Tree
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/evaluate">
-                      Evaluate Model
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/predict">
-                      Predict
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  #sidebar {
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #343a40, #212529);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Adjust the width as needed */
+    z-index: 1000;
+  }
+  
+  #sidebar .nav-link {
+    font-size: 0.9rem;
+    padding: 15px 20px;
+    color: #ddd;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #sidebar .nav-link.active {
+    background-color: #495057;
+    color: #fff;
+  }
+  
+  #sidebar .nav-link:hover {
+    background-color: #495057;
+    color: #fff;
+  }
+  
+  .container-fluid {
+    padding-left: 270px; /* Adjust according to sidebar width */
+  }
+  
+  .main-content {
+    padding: 25px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* margin-left: 15px; */
+  }
+  
+  .main-content h1 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(#343a40, #495057);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .main-content .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #333;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    background: linear-gradient(to right, #495057, #343a40);
+    color: #fff;
+  }
+  
+  .table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+  }
+  
+  .table-sm th,
+  .table-sm td {
+    padding: 0.3rem;
+  }
+  
+  .text-gradient {
+    background: -webkit-linear-gradient(#343a40, #495057);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  textarea {
+    font-family: 'Courier New', Courier, monospace;
+    background: #e9ecef;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    resize: none;
+  }
+  
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 58, 64, 0.7);
+    border: 1px solid rgba(52, 58, 64, 0.7);
+  }
+</style>
+
+<nav id="sidebar">
+  <div class="position-sticky pt-3">
+    <center>
+      <h2 style="color: white;">Random Forest</h2>
+      <hr>
+    </center>
+      <ul class="nav flex-column">
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">
+                  Home
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/view_training_data">
+                  View Training Data
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/view_test_data">
+                View Test Data
+            </a>
+        </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/training">
+                  Train Model
+              </a>
+          </li>
+          <!-- <li class="nav-item">
+              <a class="nav-link" href="/extract_rules">
+                  Extract Rules
+              </a>
+          </li> -->
+          <li class="nav-item">
+              <a class="nav-link" href="/view_rules">
+                  View Rules
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/view_trees">
+                  View Tree
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/evaluate">
+                  Evaluate Model
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/predict">
+                  Predict
+              </a>
+          </li>
+      </ul>
+  </div>
+</nav>
