@@ -212,6 +212,10 @@ def save_decision_trees_route():
     return "Decision trees saved!"
 
 
+@app.route('/extract_and_log', methods=['GET'])
+def extract_and_log_route():
+    return generate_log()
+
 @app.route('/save_rules', methods=['GET'])
 def save_rules_route():
     rf_model = joblib.load('rf_model.pkl')
@@ -236,9 +240,12 @@ def save_rules_route():
 
     return "Rules saved!"
 
-@app.route('/extract_and_log', methods=['GET'])
-def extract_and_log_route():
-    return generate_log()
+@app.route('/view_rules', methods=['GET'])
+def view_rules_route():
+    rules_file_name = 'decision_trees/all_rules.txt'
+    with open(rules_file_name, 'r') as f:
+        rules_content = f.read()
+    return render_template('view_rules.html', rules=rules_content)
 
 @app.route('/view_trees', methods=['GET'])
 def view_trees_route():
