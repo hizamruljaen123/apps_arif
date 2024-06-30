@@ -1,0 +1,30 @@
+URL Routes and Their Functions
+
+1. Route: /
+   URL: http://127.0.0.1:5000/
+   Function: Menampilkan halaman index utama.
+   
+2. Route: /load_data
+   URL: http://127.0.0.1:5000/load_data
+   Method: GET
+   Function: Memuat data latih dan uji dari file Excel dan menampilkan beberapa baris pertama dari data tersebut.
+
+3. Route: /train
+   URL: http://127.0.0.1:5000/train
+   Method: GET
+   Function: Melatih model Random Forest dengan data latih dan menyimpan model yang telah dilatih.
+
+4. Route: /extract_rules
+   URL: http://127.0.0.1:5000/extract_rules
+   Method: GET
+   Function: Mengekstrak aturan dari pohon keputusan dalam model Random Forest dan menyimpan aturan serta visualisasi pohon keputusan.
+
+5. Route: /evaluate
+   URL: http://127.0.0.1:5000/evaluate
+   Method: GET
+   Function: Mengevaluasi model Random Forest menggunakan cross-validation, akurasi pelatihan, laporan klasifikasi, dan matriks kebingungan.
+
+6. Route: /predict
+   URL: http://127.0.0.1:5000/predict
+   Method: GET
+   Function: Membuat prediksi menggunakan model Random Forest dengan data uji dan menyimpan hasil prediksi ke file Excel.

@@ -1,0 +1,2122 @@
+Rules for tree 1:
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan <= 35.0
+        IF Curah Hujan <= 11.5
+            THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan <= 35.0
+        IF Curah Hujan > 11.5
+            THEN Waspada
+
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan > 35.0
+        THEN Siaga
+
+IF Kecepatan Angin > 16.0
+    THEN Awas
+
+Rules for tree 2:
+IF Ketinggian Air Tanah <= 2.25
+    IF Tinggi Muka Air Sungai <= 2.35
+        THEN Aman
+
+IF Ketinggian Air Tanah <= 2.25
+    IF Tinggi Muka Air Sungai > 2.35
+        IF Tinggi Muka Air Sungai <= 2.95
+            THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.25
+    IF Tinggi Muka Air Sungai > 2.35
+        IF Tinggi Muka Air Sungai > 2.95
+            THEN Siaga
+
+IF Ketinggian Air Tanah > 2.25
+    THEN Awas
+
+Rules for tree 3:
+IF Tinggi Muka Air Sungai <= 2.4
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.4
+    IF Tinggi Muka Air Sungai <= 2.95
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.4
+    IF Tinggi Muka Air Sungai > 2.95
+        IF Ketinggian Air Tanah <= 2.2
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.4
+    IF Tinggi Muka Air Sungai > 2.95
+        IF Ketinggian Air Tanah > 2.2
+            THEN Awas
+
+Rules for tree 4:
+IF Ketinggian Air Tanah <= 2.25
+    IF Curah Hujan <= 33.5
+        IF Tinggi Muka Air Sungai <= 2.5
+            THEN Aman
+
+IF Ketinggian Air Tanah <= 2.25
+    IF Curah Hujan <= 33.5
+        IF Tinggi Muka Air Sungai > 2.5
+            THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.25
+    IF Curah Hujan > 33.5
+        THEN Siaga
+
+IF Ketinggian Air Tanah > 2.25
+    THEN Awas
+
+Rules for tree 5:
+IF Ketinggian Air Tanah <= 2.05
+    IF Kecepatan Angin <= 8.5
+        THEN Aman
+
+IF Ketinggian Air Tanah <= 2.05
+    IF Kecepatan Angin > 8.5
+        IF Curah Hujan <= 11.5
+            THEN Aman
+
+IF Ketinggian Air Tanah <= 2.05
+    IF Kecepatan Angin > 8.5
+        IF Curah Hujan > 11.5
+            THEN Waspada
+
+IF Ketinggian Air Tanah > 2.05
+    IF Suhu <= 30.0
+        THEN Siaga
+
+IF Ketinggian Air Tanah > 2.05
+    IF Suhu > 30.0
+        THEN Awas
+
+Rules for tree 6:
+IF Kecepatan Angin <= 14.5
+    IF Ketinggian Air Tanah <= 1.65
+        THEN Aman
+
+IF Kecepatan Angin <= 14.5
+    IF Ketinggian Air Tanah > 1.65
+        IF Suhu <= 31.0
+            IF Tinggi Muka Air Sungai <= 3.0
+                THEN Waspada
+
+IF Kecepatan Angin <= 14.5
+    IF Ketinggian Air Tanah > 1.65
+        IF Suhu <= 31.0
+            IF Tinggi Muka Air Sungai > 3.0
+                THEN Siaga
+
+IF Kecepatan Angin <= 14.5
+    IF Ketinggian Air Tanah > 1.65
+        IF Suhu > 31.0
+            THEN Siaga
+
+IF Kecepatan Angin > 14.5
+    THEN Awas
+
+Rules for tree 7:
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Tinggi Muka Air Sungai <= 2.45
+        THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Tinggi Muka Air Sungai > 2.45
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Curah Hujan <= 70.0
+        THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Curah Hujan > 70.0
+        THEN Awas
+
+Rules for tree 8:
+IF Curah Hujan <= 35.0
+    IF Tinggi Muka Air Sungai <= 2.5
+        THEN Aman
+
+IF Curah Hujan <= 35.0
+    IF Tinggi Muka Air Sungai > 2.5
+        THEN Waspada
+
+IF Curah Hujan > 35.0
+    IF Kecepatan Angin <= 16.0
+        THEN Siaga
+
+IF Curah Hujan > 35.0
+    IF Kecepatan Angin > 16.0
+        THEN Awas
+
+Rules for tree 9:
+IF Tinggi Muka Air Sungai <= 2.5
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.5
+    IF Curah Hujan <= 37.5
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.5
+    IF Curah Hujan > 37.5
+        IF Tinggi Muka Air Sungai <= 3.35
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.5
+    IF Curah Hujan > 37.5
+        IF Tinggi Muka Air Sungai > 3.35
+            THEN Awas
+
+Rules for tree 10:
+IF Kecepatan Angin <= 16.0
+    IF Tinggi Muka Air Sungai <= 2.45
+        THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Tinggi Muka Air Sungai > 2.45
+        IF Ketinggian Air Tanah <= 2.05
+            THEN Waspada
+
+IF Kecepatan Angin <= 16.0
+    IF Tinggi Muka Air Sungai > 2.45
+        IF Ketinggian Air Tanah > 2.05
+            THEN Siaga
+
+IF Kecepatan Angin > 16.0
+    THEN Awas
+
+Rules for tree 11:
+IF Curah Hujan <= 12.5
+    THEN Aman
+
+IF Curah Hujan > 12.5
+    IF Tinggi Muka Air Sungai <= 2.9
+        THEN Waspada
+
+IF Curah Hujan > 12.5
+    IF Tinggi Muka Air Sungai > 2.9
+        THEN Siaga
+
+Rules for tree 12:
+IF Ketinggian Air Tanah <= 2.25
+    IF Curah Hujan <= 14.0
+        THEN Aman
+
+IF Ketinggian Air Tanah <= 2.25
+    IF Curah Hujan > 14.0
+        IF Ketinggian Air Tanah <= 1.95
+            THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.25
+    IF Curah Hujan > 14.0
+        IF Ketinggian Air Tanah > 1.95
+            THEN Siaga
+
+IF Ketinggian Air Tanah > 2.25
+    THEN Awas
+
+Rules for tree 13:
+IF Curah Hujan <= 35.0
+    IF Curah Hujan <= 12.5
+        THEN Aman
+
+IF Curah Hujan <= 35.0
+    IF Curah Hujan > 12.5
+        THEN Waspada
+
+IF Curah Hujan > 35.0
+    IF Kecepatan Angin <= 16.5
+        THEN Siaga
+
+IF Curah Hujan > 35.0
+    IF Kecepatan Angin > 16.5
+        THEN Awas
+
+Rules for tree 14:
+IF Kelembaban <= 80.5
+    IF Tinggi Muka Air Sungai <= 2.45
+        THEN Aman
+
+IF Kelembaban <= 80.5
+    IF Tinggi Muka Air Sungai > 2.45
+        THEN Waspada
+
+IF Kelembaban > 80.5
+    IF Curah Hujan <= 65.0
+        THEN Siaga
+
+IF Kelembaban > 80.5
+    IF Curah Hujan > 65.0
+        THEN Awas
+
+Rules for tree 15:
+IF Kelembaban <= 76.5
+    IF Curah Hujan <= 14.0
+        THEN Aman
+
+IF Kelembaban <= 76.5
+    IF Curah Hujan > 14.0
+        THEN Waspada
+
+IF Kelembaban > 76.5
+    IF Kecepatan Angin <= 13.5
+        IF Tinggi Muka Air Sungai <= 3.0
+            THEN Waspada
+
+IF Kelembaban > 76.5
+    IF Kecepatan Angin <= 13.5
+        IF Tinggi Muka Air Sungai > 3.0
+            THEN Siaga
+
+IF Kelembaban > 76.5
+    IF Kecepatan Angin > 13.5
+        IF Tinggi Muka Air Sungai <= 3.25
+            THEN Siaga
+
+IF Kelembaban > 76.5
+    IF Kecepatan Angin > 13.5
+        IF Tinggi Muka Air Sungai > 3.25
+            THEN Awas
+
+Rules for tree 16:
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Kecepatan Angin <= 9.5
+        IF Ketinggian Air Tanah <= 1.75
+            THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Kecepatan Angin <= 9.5
+        IF Ketinggian Air Tanah > 1.75
+            THEN Waspada
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Kecepatan Angin > 9.5
+        IF Ketinggian Air Tanah <= 1.85
+            THEN Waspada
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Kecepatan Angin > 9.5
+        IF Ketinggian Air Tanah > 1.85
+            IF Kecepatan Angin <= 11.5
+                THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Kecepatan Angin > 9.5
+        IF Ketinggian Air Tanah > 1.85
+            IF Kecepatan Angin > 11.5
+                IF Curah Hujan <= 17.5
+                    THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Kecepatan Angin > 9.5
+        IF Ketinggian Air Tanah > 1.85
+            IF Kecepatan Angin > 11.5
+                IF Curah Hujan > 17.5
+                    THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Kecepatan Angin <= 16.0
+        THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Kecepatan Angin > 16.0
+        THEN Awas
+
+Rules for tree 17:
+IF Kecepatan Angin <= 13.0
+    IF Tinggi Muka Air Sungai <= 2.3
+        THEN Aman
+
+IF Kecepatan Angin <= 13.0
+    IF Tinggi Muka Air Sungai > 2.3
+        THEN Waspada
+
+IF Kecepatan Angin > 13.0
+    IF Tinggi Muka Air Sungai <= 3.35
+        THEN Siaga
+
+IF Kecepatan Angin > 13.0
+    IF Tinggi Muka Air Sungai > 3.35
+        THEN Awas
+
+Rules for tree 18:
+IF Curah Hujan <= 14.0
+    THEN Aman
+
+IF Curah Hujan > 14.0
+    IF Curah Hujan <= 35.0
+        THEN Waspada
+
+IF Curah Hujan > 14.0
+    IF Curah Hujan > 35.0
+        IF Kecepatan Angin <= 16.0
+            THEN Siaga
+
+IF Curah Hujan > 14.0
+    IF Curah Hujan > 35.0
+        IF Kecepatan Angin > 16.0
+            THEN Awas
+
+Rules for tree 19:
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Tinggi Muka Air Sungai <= 2.4
+        THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Tinggi Muka Air Sungai > 2.4
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Kecepatan Angin <= 16.0
+        THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Kecepatan Angin > 16.0
+        THEN Awas
+
+Rules for tree 20:
+IF Kelembaban <= 76.5
+    THEN Aman
+
+IF Kelembaban > 76.5
+    IF Curah Hujan <= 35.0
+        THEN Waspada
+
+IF Kelembaban > 76.5
+    IF Curah Hujan > 35.0
+        IF Tinggi Muka Air Sungai <= 3.5
+            THEN Siaga
+
+IF Kelembaban > 76.5
+    IF Curah Hujan > 35.0
+        IF Tinggi Muka Air Sungai > 3.5
+            THEN Awas
+
+Rules for tree 21:
+IF Curah Hujan <= 67.5
+    IF Curah Hujan <= 31.0
+        IF Tinggi Muka Air Sungai <= 2.45
+            THEN Aman
+
+IF Curah Hujan <= 67.5
+    IF Curah Hujan <= 31.0
+        IF Tinggi Muka Air Sungai > 2.45
+            THEN Waspada
+
+IF Curah Hujan <= 67.5
+    IF Curah Hujan > 31.0
+        THEN Siaga
+
+IF Curah Hujan > 67.5
+    THEN Awas
+
+Rules for tree 22:
+IF Kecepatan Angin <= 16.5
+    IF Ketinggian Air Tanah <= 1.95
+        IF Tinggi Muka Air Sungai <= 2.5
+            THEN Aman
+
+IF Kecepatan Angin <= 16.5
+    IF Ketinggian Air Tanah <= 1.95
+        IF Tinggi Muka Air Sungai > 2.5
+            THEN Waspada
+
+IF Kecepatan Angin <= 16.5
+    IF Ketinggian Air Tanah > 1.95
+        THEN Siaga
+
+IF Kecepatan Angin > 16.5
+    THEN Awas
+
+Rules for tree 23:
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Ketinggian Air Tanah <= 1.65
+        THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Ketinggian Air Tanah > 1.65
+        IF Kecepatan Angin <= 10.0
+            THEN Waspada
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Ketinggian Air Tanah > 1.65
+        IF Kecepatan Angin > 10.0
+            IF Tinggi Muka Air Sungai <= 2.6
+                THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Ketinggian Air Tanah > 1.65
+        IF Kecepatan Angin > 10.0
+            IF Tinggi Muka Air Sungai > 2.6
+                THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Suhu <= 30.5
+        THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Suhu > 30.5
+        THEN Awas
+
+Rules for tree 24:
+IF Curah Hujan <= 35.0
+    IF Ketinggian Air Tanah <= 1.65
+        THEN Aman
+
+IF Curah Hujan <= 35.0
+    IF Ketinggian Air Tanah > 1.65
+        THEN Waspada
+
+IF Curah Hujan > 35.0
+    IF Kecepatan Angin <= 17.5
+        THEN Siaga
+
+IF Curah Hujan > 35.0
+    IF Kecepatan Angin > 17.5
+        THEN Awas
+
+Rules for tree 25:
+IF Suhu <= 31.0
+    IF Curah Hujan <= 12.5
+        THEN Aman
+
+IF Suhu <= 31.0
+    IF Curah Hujan > 12.5
+        IF Ketinggian Air Tanah <= 1.95
+            THEN Waspada
+
+IF Suhu <= 31.0
+    IF Curah Hujan > 12.5
+        IF Ketinggian Air Tanah > 1.95
+            IF Tinggi Muka Air Sungai <= 2.9
+                THEN Waspada
+
+IF Suhu <= 31.0
+    IF Curah Hujan > 12.5
+        IF Ketinggian Air Tanah > 1.95
+            IF Tinggi Muka Air Sungai > 2.9
+                THEN Siaga
+
+IF Suhu > 31.0
+    IF Curah Hujan <= 60.0
+        THEN Siaga
+
+IF Suhu > 31.0
+    IF Curah Hujan > 60.0
+        THEN Awas
+
+Rules for tree 26:
+IF Curah Hujan <= 31.0
+    IF Tinggi Muka Air Sungai <= 2.45
+        THEN Aman
+
+IF Curah Hujan <= 31.0
+    IF Tinggi Muka Air Sungai > 2.45
+        THEN Waspada
+
+IF Curah Hujan > 31.0
+    IF Tinggi Muka Air Sungai <= 3.35
+        THEN Siaga
+
+IF Curah Hujan > 31.0
+    IF Tinggi Muka Air Sungai > 3.35
+        THEN Awas
+
+Rules for tree 27:
+IF Ketinggian Air Tanah <= 1.65
+    THEN Aman
+
+IF Ketinggian Air Tanah > 1.65
+    IF Curah Hujan <= 67.5
+        IF Ketinggian Air Tanah <= 1.9
+            THEN Waspada
+
+IF Ketinggian Air Tanah > 1.65
+    IF Curah Hujan <= 67.5
+        IF Ketinggian Air Tanah > 1.9
+            IF Curah Hujan <= 25.0
+                THEN Aman
+
+IF Ketinggian Air Tanah > 1.65
+    IF Curah Hujan <= 67.5
+        IF Ketinggian Air Tanah > 1.9
+            IF Curah Hujan > 25.0
+                THEN Siaga
+
+IF Ketinggian Air Tanah > 1.65
+    IF Curah Hujan > 67.5
+        THEN Awas
+
+Rules for tree 28:
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Tinggi Muka Air Sungai <= 2.45
+        THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Tinggi Muka Air Sungai > 2.45
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Kelembaban <= 86.5
+        THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Kelembaban > 86.5
+        THEN Awas
+
+Rules for tree 29:
+IF Kecepatan Angin <= 16.0
+    IF Kecepatan Angin <= 8.5
+        THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Kecepatan Angin > 8.5
+        IF Tinggi Muka Air Sungai <= 2.9
+            THEN Waspada
+
+IF Kecepatan Angin <= 16.0
+    IF Kecepatan Angin > 8.5
+        IF Tinggi Muka Air Sungai > 2.9
+            THEN Siaga
+
+IF Kecepatan Angin > 16.0
+    THEN Awas
+
+Rules for tree 30:
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Tinggi Muka Air Sungai <= 2.45
+        THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Tinggi Muka Air Sungai > 2.45
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Curah Hujan <= 65.0
+        THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Curah Hujan > 65.0
+        THEN Awas
+
+Rules for tree 31:
+IF Tinggi Muka Air Sungai <= 2.45
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Kecepatan Angin <= 10.5
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Kecepatan Angin > 10.5
+        IF Kecepatan Angin <= 16.0
+            IF Tinggi Muka Air Sungai <= 2.9
+                THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Kecepatan Angin > 10.5
+        IF Kecepatan Angin <= 16.0
+            IF Tinggi Muka Air Sungai > 2.9
+                THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Kecepatan Angin > 10.5
+        IF Kecepatan Angin > 16.0
+            THEN Awas
+
+Rules for tree 32:
+IF Ketinggian Air Tanah <= 2.05
+    IF Suhu <= 29.5
+        IF Curah Hujan <= 20.0
+            THEN Aman
+
+IF Ketinggian Air Tanah <= 2.05
+    IF Suhu <= 29.5
+        IF Curah Hujan > 20.0
+            THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.05
+    IF Suhu > 29.5
+        IF Kelembaban <= 78.5
+            THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.05
+    IF Suhu > 29.5
+        IF Kelembaban > 78.5
+            THEN Siaga
+
+IF Ketinggian Air Tanah > 2.05
+    IF Ketinggian Air Tanah <= 2.25
+        THEN Siaga
+
+IF Ketinggian Air Tanah > 2.05
+    IF Ketinggian Air Tanah > 2.25
+        THEN Awas
+
+Rules for tree 33:
+IF Kecepatan Angin <= 12.5
+    IF Kelembaban <= 74.5
+        THEN Aman
+
+IF Kecepatan Angin <= 12.5
+    IF Kelembaban > 74.5
+        IF Ketinggian Air Tanah <= 1.65
+            THEN Aman
+
+IF Kecepatan Angin <= 12.5
+    IF Kelembaban > 74.5
+        IF Ketinggian Air Tanah > 1.65
+            IF Ketinggian Air Tanah <= 1.95
+                THEN Waspada
+
+IF Kecepatan Angin <= 12.5
+    IF Kelembaban > 74.5
+        IF Ketinggian Air Tanah > 1.65
+            IF Ketinggian Air Tanah > 1.95
+                THEN Siaga
+
+IF Kecepatan Angin > 12.5
+    IF Suhu <= 30.0
+        THEN Siaga
+
+IF Kecepatan Angin > 12.5
+    IF Suhu > 30.0
+        THEN Awas
+
+Rules for tree 34:
+IF Curah Hujan <= 35.0
+    IF Tinggi Muka Air Sungai <= 2.45
+        THEN Aman
+
+IF Curah Hujan <= 35.0
+    IF Tinggi Muka Air Sungai > 2.45
+        THEN Waspada
+
+IF Curah Hujan > 35.0
+    IF Curah Hujan <= 67.5
+        THEN Siaga
+
+IF Curah Hujan > 35.0
+    IF Curah Hujan > 67.5
+        THEN Awas
+
+Rules for tree 35:
+IF Tinggi Muka Air Sungai <= 2.45
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan <= 67.5
+        IF Kecepatan Angin <= 10.5
+            IF Suhu <= 31.5
+                THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan <= 67.5
+        IF Kecepatan Angin <= 10.5
+            IF Suhu > 31.5
+                THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan <= 67.5
+        IF Kecepatan Angin > 10.5
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan > 67.5
+        THEN Awas
+
+Rules for tree 36:
+IF Kecepatan Angin <= 13.0
+    IF Ketinggian Air Tanah <= 1.65
+        THEN Aman
+
+IF Kecepatan Angin <= 13.0
+    IF Ketinggian Air Tanah > 1.65
+        IF Ketinggian Air Tanah <= 1.85
+            THEN Waspada
+
+IF Kecepatan Angin <= 13.0
+    IF Ketinggian Air Tanah > 1.65
+        IF Ketinggian Air Tanah > 1.85
+            IF Tinggi Muka Air Sungai <= 2.75
+                THEN Aman
+
+IF Kecepatan Angin <= 13.0
+    IF Ketinggian Air Tanah > 1.65
+        IF Ketinggian Air Tanah > 1.85
+            IF Tinggi Muka Air Sungai > 2.75
+                THEN Siaga
+
+IF Kecepatan Angin > 13.0
+    IF Suhu <= 30.0
+        THEN Siaga
+
+IF Kecepatan Angin > 13.0
+    IF Suhu > 30.0
+        THEN Awas
+
+Rules for tree 37:
+IF Curah Hujan <= 67.5
+    IF Kecepatan Angin <= 10.5
+        IF Kelembaban <= 74.0
+            THEN Aman
+
+IF Curah Hujan <= 67.5
+    IF Kecepatan Angin <= 10.5
+        IF Kelembaban > 74.0
+            THEN Waspada
+
+IF Curah Hujan <= 67.5
+    IF Kecepatan Angin > 10.5
+        IF Kecepatan Angin <= 13.0
+            THEN Aman
+
+IF Curah Hujan <= 67.5
+    IF Kecepatan Angin > 10.5
+        IF Kecepatan Angin > 13.0
+            THEN Siaga
+
+IF Curah Hujan > 67.5
+    THEN Awas
+
+Rules for tree 38:
+IF Tinggi Muka Air Sungai <= 3.35
+    IF Kelembaban <= 75.5
+        THEN Aman
+
+IF Tinggi Muka Air Sungai <= 3.35
+    IF Kelembaban > 75.5
+        IF Tinggi Muka Air Sungai <= 2.9
+            THEN Waspada
+
+IF Tinggi Muka Air Sungai <= 3.35
+    IF Kelembaban > 75.5
+        IF Tinggi Muka Air Sungai > 2.9
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 3.35
+    THEN Awas
+
+Rules for tree 39:
+IF Tinggi Muka Air Sungai <= 2.4
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.4
+    IF Curah Hujan <= 40.0
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.4
+    IF Curah Hujan > 40.0
+        IF Ketinggian Air Tanah <= 2.2
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.4
+    IF Curah Hujan > 40.0
+        IF Ketinggian Air Tanah > 2.2
+            THEN Awas
+
+Rules for tree 40:
+IF Tinggi Muka Air Sungai <= 2.5
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.5
+    IF Curah Hujan <= 37.5
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.5
+    IF Curah Hujan > 37.5
+        IF Suhu <= 32.5
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.5
+    IF Curah Hujan > 37.5
+        IF Suhu > 32.5
+            THEN Awas
+
+Rules for tree 41:
+IF Tinggi Muka Air Sungai <= 2.6
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.6
+    IF Kecepatan Angin <= 16.0
+        IF Ketinggian Air Tanah <= 1.95
+            THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.6
+    IF Kecepatan Angin <= 16.0
+        IF Ketinggian Air Tanah > 1.95
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.6
+    IF Kecepatan Angin > 16.0
+        THEN Awas
+
+Rules for tree 42:
+IF Tinggi Muka Air Sungai <= 3.35
+    IF Curah Hujan <= 35.0
+        IF Tinggi Muka Air Sungai <= 2.45
+            THEN Aman
+
+IF Tinggi Muka Air Sungai <= 3.35
+    IF Curah Hujan <= 35.0
+        IF Tinggi Muka Air Sungai > 2.45
+            THEN Waspada
+
+IF Tinggi Muka Air Sungai <= 3.35
+    IF Curah Hujan > 35.0
+        THEN Siaga
+
+IF Tinggi Muka Air Sungai > 3.35
+    THEN Awas
+
+Rules for tree 43:
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan <= 35.0
+        IF Tinggi Muka Air Sungai <= 2.4
+            THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan <= 35.0
+        IF Tinggi Muka Air Sungai > 2.4
+            THEN Waspada
+
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan > 35.0
+        THEN Siaga
+
+IF Kecepatan Angin > 16.0
+    THEN Awas
+
+Rules for tree 44:
+IF Ketinggian Air Tanah <= 2.2
+    IF Tinggi Muka Air Sungai <= 2.45
+        THEN Aman
+
+IF Ketinggian Air Tanah <= 2.2
+    IF Tinggi Muka Air Sungai > 2.45
+        IF Tinggi Muka Air Sungai <= 2.9
+            THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.2
+    IF Tinggi Muka Air Sungai > 2.45
+        IF Tinggi Muka Air Sungai > 2.9
+            THEN Siaga
+
+IF Ketinggian Air Tanah > 2.2
+    THEN Awas
+
+Rules for tree 45:
+IF Ketinggian Air Tanah <= 2.25
+    IF Tinggi Muka Air Sungai <= 2.95
+        IF Suhu <= 30.5
+            THEN Aman
+
+IF Ketinggian Air Tanah <= 2.25
+    IF Tinggi Muka Air Sungai <= 2.95
+        IF Suhu > 30.5
+            THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.25
+    IF Tinggi Muka Air Sungai > 2.95
+        THEN Siaga
+
+IF Ketinggian Air Tanah > 2.25
+    THEN Awas
+
+Rules for tree 46:
+IF Kecepatan Angin <= 16.0
+    IF Ketinggian Air Tanah <= 2.05
+        IF Ketinggian Air Tanah <= 1.7
+            THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Ketinggian Air Tanah <= 2.05
+        IF Ketinggian Air Tanah > 1.7
+            IF Tinggi Muka Air Sungai <= 2.5
+                THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Ketinggian Air Tanah <= 2.05
+        IF Ketinggian Air Tanah > 1.7
+            IF Tinggi Muka Air Sungai > 2.5
+                IF Tinggi Muka Air Sungai <= 2.95
+                    THEN Waspada
+
+IF Kecepatan Angin <= 16.0
+    IF Ketinggian Air Tanah <= 2.05
+        IF Ketinggian Air Tanah > 1.7
+            IF Tinggi Muka Air Sungai > 2.5
+                IF Tinggi Muka Air Sungai > 2.95
+                    THEN Siaga
+
+IF Kecepatan Angin <= 16.0
+    IF Ketinggian Air Tanah > 2.05
+        THEN Siaga
+
+IF Kecepatan Angin > 16.0
+    THEN Awas
+
+Rules for tree 47:
+IF Ketinggian Air Tanah <= 2.2
+    IF Kelembaban <= 76.5
+        THEN Aman
+
+IF Ketinggian Air Tanah <= 2.2
+    IF Kelembaban > 76.5
+        IF Kecepatan Angin <= 13.5
+            IF Tinggi Muka Air Sungai <= 2.25
+                THEN Aman
+
+IF Ketinggian Air Tanah <= 2.2
+    IF Kelembaban > 76.5
+        IF Kecepatan Angin <= 13.5
+            IF Tinggi Muka Air Sungai > 2.25
+                IF Suhu <= 31.5
+                    THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.2
+    IF Kelembaban > 76.5
+        IF Kecepatan Angin <= 13.5
+            IF Tinggi Muka Air Sungai > 2.25
+                IF Suhu > 31.5
+                    THEN Siaga
+
+IF Ketinggian Air Tanah <= 2.2
+    IF Kelembaban > 76.5
+        IF Kecepatan Angin > 13.5
+            THEN Siaga
+
+IF Ketinggian Air Tanah > 2.2
+    THEN Awas
+
+Rules for tree 48:
+IF Curah Hujan <= 67.5
+    IF Curah Hujan <= 14.0
+        THEN Aman
+
+IF Curah Hujan <= 67.5
+    IF Curah Hujan > 14.0
+        IF Curah Hujan <= 37.5
+            THEN Waspada
+
+IF Curah Hujan <= 67.5
+    IF Curah Hujan > 14.0
+        IF Curah Hujan > 37.5
+            THEN Siaga
+
+IF Curah Hujan > 67.5
+    THEN Awas
+
+Rules for tree 49:
+IF Tinggi Muka Air Sungai <= 2.45
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Tinggi Muka Air Sungai <= 2.9
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Tinggi Muka Air Sungai > 2.9
+        IF Curah Hujan <= 67.5
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Tinggi Muka Air Sungai > 2.9
+        IF Curah Hujan > 67.5
+            THEN Awas
+
+Rules for tree 50:
+IF Curah Hujan <= 14.0
+    THEN Aman
+
+IF Curah Hujan > 14.0
+    IF Curah Hujan <= 37.5
+        THEN Waspada
+
+IF Curah Hujan > 14.0
+    IF Curah Hujan > 37.5
+        IF Curah Hujan <= 67.5
+            THEN Siaga
+
+IF Curah Hujan > 14.0
+    IF Curah Hujan > 37.5
+        IF Curah Hujan > 67.5
+            THEN Awas
+
+Rules for tree 51:
+IF Tinggi Muka Air Sungai <= 2.45
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan <= 35.0
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan > 35.0
+        IF Ketinggian Air Tanah <= 2.25
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan > 35.0
+        IF Ketinggian Air Tanah > 2.25
+            THEN Awas
+
+Rules for tree 52:
+IF Tinggi Muka Air Sungai <= 3.05
+    IF Kelembaban <= 76.5
+        THEN Aman
+
+IF Tinggi Muka Air Sungai <= 3.05
+    IF Kelembaban > 76.5
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 3.05
+    IF Tinggi Muka Air Sungai <= 3.35
+        THEN Siaga
+
+IF Tinggi Muka Air Sungai > 3.05
+    IF Tinggi Muka Air Sungai > 3.35
+        THEN Awas
+
+Rules for tree 53:
+IF Curah Hujan <= 12.5
+    THEN Aman
+
+IF Curah Hujan > 12.5
+    IF Kecepatan Angin <= 13.0
+        THEN Waspada
+
+IF Curah Hujan > 12.5
+    IF Kecepatan Angin > 13.0
+        IF Ketinggian Air Tanah <= 2.25
+            THEN Siaga
+
+IF Curah Hujan > 12.5
+    IF Kecepatan Angin > 13.0
+        IF Ketinggian Air Tanah > 2.25
+            THEN Awas
+
+Rules for tree 54:
+IF Kelembaban <= 77.0
+    IF Ketinggian Air Tanah <= 1.7
+        THEN Aman
+
+IF Kelembaban <= 77.0
+    IF Ketinggian Air Tanah > 1.7
+        IF Tinggi Muka Air Sungai <= 2.45
+            THEN Aman
+
+IF Kelembaban <= 77.0
+    IF Ketinggian Air Tanah > 1.7
+        IF Tinggi Muka Air Sungai > 2.45
+            THEN Waspada
+
+IF Kelembaban > 77.0
+    IF Ketinggian Air Tanah <= 2.2
+        IF Kecepatan Angin <= 10.0
+            THEN Waspada
+
+IF Kelembaban > 77.0
+    IF Ketinggian Air Tanah <= 2.2
+        IF Kecepatan Angin > 10.0
+            THEN Siaga
+
+IF Kelembaban > 77.0
+    IF Ketinggian Air Tanah > 2.2
+        THEN Awas
+
+Rules for tree 55:
+IF Kecepatan Angin <= 10.5
+    IF Curah Hujan <= 37.5
+        IF Tinggi Muka Air Sungai <= 2.25
+            THEN Aman
+
+IF Kecepatan Angin <= 10.5
+    IF Curah Hujan <= 37.5
+        IF Tinggi Muka Air Sungai > 2.25
+            THEN Waspada
+
+IF Kecepatan Angin <= 10.5
+    IF Curah Hujan > 37.5
+        THEN Siaga
+
+IF Kecepatan Angin > 10.5
+    IF Ketinggian Air Tanah <= 2.25
+        IF Curah Hujan <= 22.5
+            THEN Aman
+
+IF Kecepatan Angin > 10.5
+    IF Ketinggian Air Tanah <= 2.25
+        IF Curah Hujan > 22.5
+            THEN Siaga
+
+IF Kecepatan Angin > 10.5
+    IF Ketinggian Air Tanah > 2.25
+        THEN Awas
+
+Rules for tree 56:
+IF Ketinggian Air Tanah <= 2.05
+    IF Ketinggian Air Tanah <= 1.95
+        IF Kelembaban <= 74.5
+            THEN Aman
+
+IF Ketinggian Air Tanah <= 2.05
+    IF Ketinggian Air Tanah <= 1.95
+        IF Kelembaban > 74.5
+            IF Ketinggian Air Tanah <= 1.7
+                THEN Aman
+
+IF Ketinggian Air Tanah <= 2.05
+    IF Ketinggian Air Tanah <= 1.95
+        IF Kelembaban > 74.5
+            IF Ketinggian Air Tanah > 1.7
+                THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.05
+    IF Ketinggian Air Tanah > 1.95
+        IF Suhu <= 26.5
+            THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.05
+    IF Ketinggian Air Tanah > 1.95
+        IF Suhu > 26.5
+            THEN Siaga
+
+IF Ketinggian Air Tanah > 2.05
+    IF Ketinggian Air Tanah <= 2.25
+        THEN Siaga
+
+IF Ketinggian Air Tanah > 2.05
+    IF Ketinggian Air Tanah > 2.25
+        THEN Awas
+
+Rules for tree 57:
+IF Curah Hujan <= 14.0
+    THEN Aman
+
+IF Curah Hujan > 14.0
+    IF Ketinggian Air Tanah <= 2.15
+        IF Kelembaban <= 78.0
+            THEN Waspada
+
+IF Curah Hujan > 14.0
+    IF Ketinggian Air Tanah <= 2.15
+        IF Kelembaban > 78.0
+            THEN Siaga
+
+IF Curah Hujan > 14.0
+    IF Ketinggian Air Tanah > 2.15
+        THEN Awas
+
+Rules for tree 58:
+IF Curah Hujan <= 65.0
+    IF Suhu <= 28.5
+        IF Suhu <= 25.0
+            THEN Aman
+
+IF Curah Hujan <= 65.0
+    IF Suhu <= 28.5
+        IF Suhu > 25.0
+            IF Kecepatan Angin <= 10.5
+                THEN Waspada
+
+IF Curah Hujan <= 65.0
+    IF Suhu <= 28.5
+        IF Suhu > 25.0
+            IF Kecepatan Angin > 10.5
+                IF Tinggi Muka Air Sungai <= 2.6
+                    THEN Aman
+
+IF Curah Hujan <= 65.0
+    IF Suhu <= 28.5
+        IF Suhu > 25.0
+            IF Kecepatan Angin > 10.5
+                IF Tinggi Muka Air Sungai > 2.6
+                    THEN Waspada
+
+IF Curah Hujan <= 65.0
+    IF Suhu > 28.5
+        IF Curah Hujan <= 27.5
+            THEN Aman
+
+IF Curah Hujan <= 65.0
+    IF Suhu > 28.5
+        IF Curah Hujan > 27.5
+            THEN Siaga
+
+IF Curah Hujan > 65.0
+    THEN Awas
+
+Rules for tree 59:
+IF Kecepatan Angin <= 13.0
+    IF Curah Hujan <= 11.5
+        THEN Aman
+
+IF Kecepatan Angin <= 13.0
+    IF Curah Hujan > 11.5
+        THEN Waspada
+
+IF Kecepatan Angin > 13.0
+    IF Curah Hujan <= 67.5
+        THEN Siaga
+
+IF Kecepatan Angin > 13.0
+    IF Curah Hujan > 67.5
+        THEN Awas
+
+Rules for tree 60:
+IF Curah Hujan <= 37.5
+    IF Curah Hujan <= 12.5
+        THEN Aman
+
+IF Curah Hujan <= 37.5
+    IF Curah Hujan > 12.5
+        THEN Waspada
+
+IF Curah Hujan > 37.5
+    IF Kecepatan Angin <= 16.0
+        THEN Siaga
+
+IF Curah Hujan > 37.5
+    IF Kecepatan Angin > 16.0
+        THEN Awas
+
+Rules for tree 61:
+IF Tinggi Muka Air Sungai <= 2.6
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.6
+    IF Kecepatan Angin <= 16.0
+        IF Curah Hujan <= 35.0
+            THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.6
+    IF Kecepatan Angin <= 16.0
+        IF Curah Hujan > 35.0
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.6
+    IF Kecepatan Angin > 16.0
+        THEN Awas
+
+Rules for tree 62:
+IF Kecepatan Angin <= 16.0
+    IF Tinggi Muka Air Sungai <= 2.5
+        THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Tinggi Muka Air Sungai > 2.5
+        IF Kecepatan Angin <= 10.5
+            THEN Waspada
+
+IF Kecepatan Angin <= 16.0
+    IF Tinggi Muka Air Sungai > 2.5
+        IF Kecepatan Angin > 10.5
+            THEN Siaga
+
+IF Kecepatan Angin > 16.0
+    THEN Awas
+
+Rules for tree 63:
+IF Kelembaban <= 76.5
+    IF Tinggi Muka Air Sungai <= 2.5
+        THEN Aman
+
+IF Kelembaban <= 76.5
+    IF Tinggi Muka Air Sungai > 2.5
+        THEN Waspada
+
+IF Kelembaban > 76.5
+    IF Tinggi Muka Air Sungai <= 2.9
+        IF Tinggi Muka Air Sungai <= 2.35
+            THEN Aman
+
+IF Kelembaban > 76.5
+    IF Tinggi Muka Air Sungai <= 2.9
+        IF Tinggi Muka Air Sungai > 2.35
+            THEN Waspada
+
+IF Kelembaban > 76.5
+    IF Tinggi Muka Air Sungai > 2.9
+        IF Kelembaban <= 89.0
+            THEN Siaga
+
+IF Kelembaban > 76.5
+    IF Tinggi Muka Air Sungai > 2.9
+        IF Kelembaban > 89.0
+            THEN Awas
+
+Rules for tree 64:
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan <= 35.0
+        IF Tinggi Muka Air Sungai <= 2.5
+            THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan <= 35.0
+        IF Tinggi Muka Air Sungai > 2.5
+            THEN Waspada
+
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan > 35.0
+        THEN Siaga
+
+IF Kecepatan Angin > 16.0
+    THEN Awas
+
+Rules for tree 65:
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan <= 37.5
+        IF Curah Hujan <= 14.0
+            THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan <= 37.5
+        IF Curah Hujan > 14.0
+            THEN Waspada
+
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan > 37.5
+        THEN Siaga
+
+IF Kecepatan Angin > 16.0
+    THEN Awas
+
+Rules for tree 66:
+IF Curah Hujan <= 12.5
+    THEN Aman
+
+IF Curah Hujan > 12.5
+    IF Curah Hujan <= 35.0
+        THEN Waspada
+
+IF Curah Hujan > 12.5
+    IF Curah Hujan > 35.0
+        IF Tinggi Muka Air Sungai <= 3.35
+            THEN Siaga
+
+IF Curah Hujan > 12.5
+    IF Curah Hujan > 35.0
+        IF Tinggi Muka Air Sungai > 3.35
+            THEN Awas
+
+Rules for tree 67:
+IF Curah Hujan <= 37.5
+    IF Curah Hujan <= 12.5
+        THEN Aman
+
+IF Curah Hujan <= 37.5
+    IF Curah Hujan > 12.5
+        THEN Waspada
+
+IF Curah Hujan > 37.5
+    IF Kecepatan Angin <= 15.5
+        THEN Siaga
+
+IF Curah Hujan > 37.5
+    IF Kecepatan Angin > 15.5
+        THEN Awas
+
+Rules for tree 68:
+IF Ketinggian Air Tanah <= 1.95
+    IF Tinggi Muka Air Sungai <= 2.45
+        THEN Aman
+
+IF Ketinggian Air Tanah <= 1.95
+    IF Tinggi Muka Air Sungai > 2.45
+        THEN Waspada
+
+IF Ketinggian Air Tanah > 1.95
+    IF Curah Hujan <= 67.5
+        IF Tinggi Muka Air Sungai <= 2.65
+            THEN Aman
+
+IF Ketinggian Air Tanah > 1.95
+    IF Curah Hujan <= 67.5
+        IF Tinggi Muka Air Sungai > 2.65
+            THEN Siaga
+
+IF Ketinggian Air Tanah > 1.95
+    IF Curah Hujan > 67.5
+        THEN Awas
+
+Rules for tree 69:
+IF Kecepatan Angin <= 13.5
+    IF Kelembaban <= 77.0
+        IF Tinggi Muka Air Sungai <= 2.5
+            THEN Aman
+
+IF Kecepatan Angin <= 13.5
+    IF Kelembaban <= 77.0
+        IF Tinggi Muka Air Sungai > 2.5
+            THEN Waspada
+
+IF Kecepatan Angin <= 13.5
+    IF Kelembaban > 77.0
+        IF Suhu <= 28.5
+            THEN Waspada
+
+IF Kecepatan Angin <= 13.5
+    IF Kelembaban > 77.0
+        IF Suhu > 28.5
+            IF Ketinggian Air Tanah <= 1.75
+                THEN Aman
+
+IF Kecepatan Angin <= 13.5
+    IF Kelembaban > 77.0
+        IF Suhu > 28.5
+            IF Ketinggian Air Tanah > 1.75
+                IF Curah Hujan <= 30.0
+                    THEN Waspada
+
+IF Kecepatan Angin <= 13.5
+    IF Kelembaban > 77.0
+        IF Suhu > 28.5
+            IF Ketinggian Air Tanah > 1.75
+                IF Curah Hujan > 30.0
+                    THEN Siaga
+
+IF Kecepatan Angin > 13.5
+    IF Suhu <= 30.0
+        THEN Siaga
+
+IF Kecepatan Angin > 13.5
+    IF Suhu > 30.0
+        THEN Awas
+
+Rules for tree 70:
+IF Tinggi Muka Air Sungai <= 2.5
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.5
+    IF Tinggi Muka Air Sungai <= 2.95
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.5
+    IF Tinggi Muka Air Sungai > 2.95
+        IF Tinggi Muka Air Sungai <= 3.4
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.5
+    IF Tinggi Muka Air Sungai > 2.95
+        IF Tinggi Muka Air Sungai > 3.4
+            THEN Awas
+
+Rules for tree 71:
+IF Curah Hujan <= 12.5
+    THEN Aman
+
+IF Curah Hujan > 12.5
+    IF Kelembaban <= 86.5
+        IF Tinggi Muka Air Sungai <= 3.0
+            THEN Waspada
+
+IF Curah Hujan > 12.5
+    IF Kelembaban <= 86.5
+        IF Tinggi Muka Air Sungai > 3.0
+            THEN Siaga
+
+IF Curah Hujan > 12.5
+    IF Kelembaban > 86.5
+        THEN Awas
+
+Rules for tree 72:
+IF Curah Hujan <= 67.5
+    IF Tinggi Muka Air Sungai <= 3.0
+        IF Tinggi Muka Air Sungai <= 2.45
+            THEN Aman
+
+IF Curah Hujan <= 67.5
+    IF Tinggi Muka Air Sungai <= 3.0
+        IF Tinggi Muka Air Sungai > 2.45
+            THEN Waspada
+
+IF Curah Hujan <= 67.5
+    IF Tinggi Muka Air Sungai > 3.0
+        THEN Siaga
+
+IF Curah Hujan > 67.5
+    THEN Awas
+
+Rules for tree 73:
+IF Kelembaban <= 83.5
+    IF Curah Hujan <= 37.5
+        IF Curah Hujan <= 12.5
+            THEN Aman
+
+IF Kelembaban <= 83.5
+    IF Curah Hujan <= 37.5
+        IF Curah Hujan > 12.5
+            THEN Waspada
+
+IF Kelembaban <= 83.5
+    IF Curah Hujan > 37.5
+        THEN Siaga
+
+IF Kelembaban > 83.5
+    IF Ketinggian Air Tanah <= 2.15
+        THEN Siaga
+
+IF Kelembaban > 83.5
+    IF Ketinggian Air Tanah > 2.15
+        THEN Awas
+
+Rules for tree 74:
+IF Curah Hujan <= 67.5
+    IF Tinggi Muka Air Sungai <= 2.9
+        IF Curah Hujan <= 12.5
+            THEN Aman
+
+IF Curah Hujan <= 67.5
+    IF Tinggi Muka Air Sungai <= 2.9
+        IF Curah Hujan > 12.5
+            THEN Waspada
+
+IF Curah Hujan <= 67.5
+    IF Tinggi Muka Air Sungai > 2.9
+        THEN Siaga
+
+IF Curah Hujan > 67.5
+    THEN Awas
+
+Rules for tree 75:
+IF Kecepatan Angin <= 16.0
+    IF Ketinggian Air Tanah <= 1.95
+        IF Curah Hujan <= 12.5
+            THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Ketinggian Air Tanah <= 1.95
+        IF Curah Hujan > 12.5
+            THEN Waspada
+
+IF Kecepatan Angin <= 16.0
+    IF Ketinggian Air Tanah > 1.95
+        IF Kelembaban <= 77.0
+            THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Ketinggian Air Tanah > 1.95
+        IF Kelembaban > 77.0
+            THEN Siaga
+
+IF Kecepatan Angin > 16.0
+    THEN Awas
+
+Rules for tree 76:
+IF Suhu <= 32.0
+    IF Tinggi Muka Air Sungai <= 2.45
+        THEN Aman
+
+IF Suhu <= 32.0
+    IF Tinggi Muka Air Sungai > 2.45
+        IF Tinggi Muka Air Sungai <= 2.95
+            THEN Waspada
+
+IF Suhu <= 32.0
+    IF Tinggi Muka Air Sungai > 2.45
+        IF Tinggi Muka Air Sungai > 2.95
+            THEN Siaga
+
+IF Suhu > 32.0
+    THEN Awas
+
+Rules for tree 77:
+IF Curah Hujan <= 12.5
+    THEN Aman
+
+IF Curah Hujan > 12.5
+    IF Ketinggian Air Tanah <= 2.25
+        IF Curah Hujan <= 35.0
+            THEN Waspada
+
+IF Curah Hujan > 12.5
+    IF Ketinggian Air Tanah <= 2.25
+        IF Curah Hujan > 35.0
+            THEN Siaga
+
+IF Curah Hujan > 12.5
+    IF Ketinggian Air Tanah > 2.25
+        THEN Awas
+
+Rules for tree 78:
+IF Kecepatan Angin <= 16.0
+    IF Tinggi Muka Air Sungai <= 2.9
+        IF Suhu <= 25.0
+            THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Tinggi Muka Air Sungai <= 2.9
+        IF Suhu > 25.0
+            THEN Waspada
+
+IF Kecepatan Angin <= 16.0
+    IF Tinggi Muka Air Sungai > 2.9
+        THEN Siaga
+
+IF Kecepatan Angin > 16.0
+    THEN Awas
+
+Rules for tree 79:
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Curah Hujan <= 14.0
+        THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Curah Hujan > 14.0
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Ketinggian Air Tanah <= 2.25
+        THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Ketinggian Air Tanah > 2.25
+        THEN Awas
+
+Rules for tree 80:
+IF Tinggi Muka Air Sungai <= 2.45
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan <= 67.5
+        IF Ketinggian Air Tanah <= 1.95
+            THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan <= 67.5
+        IF Ketinggian Air Tanah > 1.95
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan > 67.5
+        THEN Awas
+
+Rules for tree 81:
+IF Ketinggian Air Tanah <= 2.2
+    IF Tinggi Muka Air Sungai <= 2.9
+        IF Suhu <= 26.5
+            THEN Aman
+
+IF Ketinggian Air Tanah <= 2.2
+    IF Tinggi Muka Air Sungai <= 2.9
+        IF Suhu > 26.5
+            IF Tinggi Muka Air Sungai <= 2.55
+                THEN Aman
+
+IF Ketinggian Air Tanah <= 2.2
+    IF Tinggi Muka Air Sungai <= 2.9
+        IF Suhu > 26.5
+            IF Tinggi Muka Air Sungai > 2.55
+                THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.2
+    IF Tinggi Muka Air Sungai > 2.9
+        THEN Siaga
+
+IF Ketinggian Air Tanah > 2.2
+    THEN Awas
+
+Rules for tree 82:
+IF Tinggi Muka Air Sungai <= 2.55
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.55
+    IF Kecepatan Angin <= 16.0
+        IF Curah Hujan <= 37.5
+            THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.55
+    IF Kecepatan Angin <= 16.0
+        IF Curah Hujan > 37.5
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.55
+    IF Kecepatan Angin > 16.0
+        THEN Awas
+
+Rules for tree 83:
+IF Curah Hujan <= 35.0
+    IF Curah Hujan <= 14.0
+        THEN Aman
+
+IF Curah Hujan <= 35.0
+    IF Curah Hujan > 14.0
+        THEN Waspada
+
+IF Curah Hujan > 35.0
+    IF Curah Hujan <= 67.5
+        THEN Siaga
+
+IF Curah Hujan > 35.0
+    IF Curah Hujan > 67.5
+        THEN Awas
+
+Rules for tree 84:
+IF Curah Hujan <= 35.0
+    IF Suhu <= 27.0
+        THEN Aman
+
+IF Curah Hujan <= 35.0
+    IF Suhu > 27.0
+        THEN Waspada
+
+IF Curah Hujan > 35.0
+    IF Kecepatan Angin <= 16.0
+        THEN Siaga
+
+IF Curah Hujan > 35.0
+    IF Kecepatan Angin > 16.0
+        THEN Awas
+
+Rules for tree 85:
+IF Tinggi Muka Air Sungai <= 3.35
+    IF Kelembaban <= 77.0
+        THEN Aman
+
+IF Tinggi Muka Air Sungai <= 3.35
+    IF Kelembaban > 77.0
+        IF Tinggi Muka Air Sungai <= 3.0
+            THEN Waspada
+
+IF Tinggi Muka Air Sungai <= 3.35
+    IF Kelembaban > 77.0
+        IF Tinggi Muka Air Sungai > 3.0
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 3.35
+    THEN Awas
+
+Rules for tree 86:
+IF Ketinggian Air Tanah <= 1.95
+    IF Curah Hujan <= 14.0
+        THEN Aman
+
+IF Ketinggian Air Tanah <= 1.95
+    IF Curah Hujan > 14.0
+        THEN Waspada
+
+IF Ketinggian Air Tanah > 1.95
+    IF Kecepatan Angin <= 16.0
+        THEN Siaga
+
+IF Ketinggian Air Tanah > 1.95
+    IF Kecepatan Angin > 16.0
+        THEN Awas
+
+Rules for tree 87:
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Tinggi Muka Air Sungai <= 2.45
+        THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Tinggi Muka Air Sungai > 2.45
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Tinggi Muka Air Sungai <= 3.35
+        THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Tinggi Muka Air Sungai > 3.35
+        THEN Awas
+
+Rules for tree 88:
+IF Curah Hujan <= 65.0
+    IF Suhu <= 28.5
+        IF Ketinggian Air Tanah <= 1.65
+            THEN Aman
+
+IF Curah Hujan <= 65.0
+    IF Suhu <= 28.5
+        IF Ketinggian Air Tanah > 1.65
+            THEN Waspada
+
+IF Curah Hujan <= 65.0
+    IF Suhu > 28.5
+        IF Kecepatan Angin <= 8.5
+            THEN Aman
+
+IF Curah Hujan <= 65.0
+    IF Suhu > 28.5
+        IF Kecepatan Angin > 8.5
+            THEN Siaga
+
+IF Curah Hujan > 65.0
+    THEN Awas
+
+Rules for tree 89:
+IF Ketinggian Air Tanah <= 2.05
+    IF Tinggi Muka Air Sungai <= 2.4
+        THEN Aman
+
+IF Ketinggian Air Tanah <= 2.05
+    IF Tinggi Muka Air Sungai > 2.4
+        THEN Waspada
+
+IF Ketinggian Air Tanah > 2.05
+    IF Ketinggian Air Tanah <= 2.25
+        THEN Siaga
+
+IF Ketinggian Air Tanah > 2.05
+    IF Ketinggian Air Tanah > 2.25
+        THEN Awas
+
+Rules for tree 90:
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Kecepatan Angin <= 7.5
+        THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Kecepatan Angin > 7.5
+        IF Kecepatan Angin <= 11.0
+            IF Ketinggian Air Tanah <= 1.65
+                THEN Aman
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Kecepatan Angin > 7.5
+        IF Kecepatan Angin <= 11.0
+            IF Ketinggian Air Tanah > 1.65
+                THEN Waspada
+
+IF Tinggi Muka Air Sungai <= 2.95
+    IF Kecepatan Angin > 7.5
+        IF Kecepatan Angin > 11.0
+            THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Ketinggian Air Tanah <= 2.25
+        THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.95
+    IF Ketinggian Air Tanah > 2.25
+        THEN Awas
+
+Rules for tree 91:
+IF Kelembaban <= 78.0
+    IF Ketinggian Air Tanah <= 1.7
+        THEN Aman
+
+IF Kelembaban <= 78.0
+    IF Ketinggian Air Tanah > 1.7
+        IF Kecepatan Angin <= 11.0
+            THEN Waspada
+
+IF Kelembaban <= 78.0
+    IF Ketinggian Air Tanah > 1.7
+        IF Kecepatan Angin > 11.0
+            IF Curah Hujan <= 17.5
+                THEN Aman
+
+IF Kelembaban <= 78.0
+    IF Ketinggian Air Tanah > 1.7
+        IF Kecepatan Angin > 11.0
+            IF Curah Hujan > 17.5
+                THEN Waspada
+
+IF Kelembaban > 78.0
+    IF Tinggi Muka Air Sungai <= 3.35
+        IF Ketinggian Air Tanah <= 1.95
+            IF Kecepatan Angin <= 8.5
+                THEN Aman
+
+IF Kelembaban > 78.0
+    IF Tinggi Muka Air Sungai <= 3.35
+        IF Ketinggian Air Tanah <= 1.95
+            IF Kecepatan Angin > 8.5
+                THEN Waspada
+
+IF Kelembaban > 78.0
+    IF Tinggi Muka Air Sungai <= 3.35
+        IF Ketinggian Air Tanah > 1.95
+            THEN Siaga
+
+IF Kelembaban > 78.0
+    IF Tinggi Muka Air Sungai > 3.35
+        THEN Awas
+
+Rules for tree 92:
+IF Curah Hujan <= 10.0
+    THEN Aman
+
+IF Curah Hujan > 10.0
+    IF Tinggi Muka Air Sungai <= 2.9
+        THEN Waspada
+
+IF Curah Hujan > 10.0
+    IF Tinggi Muka Air Sungai > 2.9
+        IF Ketinggian Air Tanah <= 2.25
+            THEN Siaga
+
+IF Curah Hujan > 10.0
+    IF Tinggi Muka Air Sungai > 2.9
+        IF Ketinggian Air Tanah > 2.25
+            THEN Awas
+
+Rules for tree 93:
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan <= 31.0
+        IF Kelembaban <= 76.5
+            THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan <= 31.0
+        IF Kelembaban > 76.5
+            IF Curah Hujan <= 12.5
+                THEN Aman
+
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan <= 31.0
+        IF Kelembaban > 76.5
+            IF Curah Hujan > 12.5
+                THEN Waspada
+
+IF Kecepatan Angin <= 16.0
+    IF Curah Hujan > 31.0
+        THEN Siaga
+
+IF Kecepatan Angin > 16.0
+    THEN Awas
+
+Rules for tree 94:
+IF Tinggi Muka Air Sungai <= 2.45
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Kelembaban <= 82.5
+        IF Kecepatan Angin <= 12.0
+            THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Kelembaban <= 82.5
+        IF Kecepatan Angin > 12.0
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Kelembaban > 82.5
+        THEN Awas
+
+Rules for tree 95:
+IF Tinggi Muka Air Sungai <= 2.4
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.4
+    IF Tinggi Muka Air Sungai <= 2.95
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.4
+    IF Tinggi Muka Air Sungai > 2.95
+        IF Kecepatan Angin <= 16.0
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.4
+    IF Tinggi Muka Air Sungai > 2.95
+        IF Kecepatan Angin > 16.0
+            THEN Awas
+
+Rules for tree 96:
+IF Curah Hujan <= 35.0
+    IF Curah Hujan <= 12.5
+        THEN Aman
+
+IF Curah Hujan <= 35.0
+    IF Curah Hujan > 12.5
+        THEN Waspada
+
+IF Curah Hujan > 35.0
+    IF Kecepatan Angin <= 15.5
+        THEN Siaga
+
+IF Curah Hujan > 35.0
+    IF Kecepatan Angin > 15.5
+        THEN Awas
+
+Rules for tree 97:
+IF Ketinggian Air Tanah <= 2.15
+    IF Suhu <= 31.0
+        IF Kecepatan Angin <= 9.5
+            THEN Aman
+
+IF Ketinggian Air Tanah <= 2.15
+    IF Suhu <= 31.0
+        IF Kecepatan Angin > 9.5
+            IF Kecepatan Angin <= 10.5
+                THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.15
+    IF Suhu <= 31.0
+        IF Kecepatan Angin > 9.5
+            IF Kecepatan Angin > 10.5
+                THEN Aman
+
+IF Ketinggian Air Tanah <= 2.15
+    IF Suhu > 31.0
+        THEN Siaga
+
+IF Ketinggian Air Tanah > 2.15
+    THEN Awas
+
+Rules for tree 98:
+IF Tinggi Muka Air Sungai <= 2.45
+    THEN Aman
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan <= 37.5
+        THEN Waspada
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan > 37.5
+        IF Kecepatan Angin <= 16.0
+            THEN Siaga
+
+IF Tinggi Muka Air Sungai > 2.45
+    IF Curah Hujan > 37.5
+        IF Kecepatan Angin > 16.0
+            THEN Awas
+
+Rules for tree 99:
+IF Ketinggian Air Tanah <= 2.2
+    IF Curah Hujan <= 14.0
+        THEN Aman
+
+IF Ketinggian Air Tanah <= 2.2
+    IF Curah Hujan > 14.0
+        IF Kecepatan Angin <= 12.5
+            IF Suhu <= 30.0
+                THEN Waspada
+
+IF Ketinggian Air Tanah <= 2.2
+    IF Curah Hujan > 14.0
+        IF Kecepatan Angin <= 12.5
+            IF Suhu > 30.0
+                THEN Siaga
+
+IF Ketinggian Air Tanah <= 2.2
+    IF Curah Hujan > 14.0
+        IF Kecepatan Angin > 12.5
+            THEN Siaga
+
+IF Ketinggian Air Tanah > 2.2
+    THEN Awas
+
+Rules for tree 100:
+IF Curah Hujan <= 67.5
+    IF Tinggi Muka Air Sungai <= 2.45
+        THEN Aman
+
+IF Curah Hujan <= 67.5
+    IF Tinggi Muka Air Sungai > 2.45
+        IF Ketinggian Air Tanah <= 1.95
+            THEN Waspada
+
+IF Curah Hujan <= 67.5
+    IF Tinggi Muka Air Sungai > 2.45
+        IF Ketinggian Air Tanah > 1.95
+            THEN Siaga
+
+IF Curah Hujan > 67.5
+    THEN Awas
+
