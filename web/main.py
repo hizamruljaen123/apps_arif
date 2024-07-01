@@ -314,5 +314,39 @@ def train_route():
 def training_page():
     return render_template('training.html')
 
+
+
+# Result
+
+
+
+@app.route('/result')
+def view_result():
+    # Load data
+    data_uji = pd.read_excel('../data_uji.xlsx')
+    hasil_prediksi = pd.read_excel('../hasil_prediksi.xlsx')
+
+    # Merge data uji dengan hasil prediksi
+    data_merged = pd.merge(data_uji, hasil_prediksi, on='Kecamatan')
+
+    # Calculate the bounds for the map view
+    min_lat, max_lat = data_merged['Latitude'].min(), data_merged['Latitude'].max()
+    min_lng, max_lng = data_merged['Longitude'].min(), data_merged['Longitude'].max()
+
+    # Convert merged data to a list of dictionaries for JavaScript
+    map_data = data_merged.to_dict(orient='records')
+
+    data_merged['View In Maps'] = data_merged.apply(
+        lambda row: f'<button class="view-in-maps btn btn-primary btn-sm" data-lat="{row.Latitude}" data-lng="{row.Longitude}">View In Maps</button>',
+        axis=1
+    )
+    data_table = data_merged.to_html(classes='table table-striped table-bordered', index=False, escape=False, table_id="dataTable")
+
+    # Send data to the HTML template
+    return render_template('view_result.html', map_data=map_data, 
+                           min_latitude=min_lat, max_latitude=max_lat,
+                           min_longitude=min_lng, max_longitude=max_lng, data_table=data_table)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
