@@ -30,14 +30,14 @@ def prepare_training_data(data_latih):
     return X_train, y_train, feature_names
 
 def train_random_forest(X_train, y_train):
-    rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
+    rf_model = RandomForestClassifier(n_estimators=100, random_state=50)
     rf_model.fit(X_train, y_train)
     return rf_model
 
 def save_model(model, file_name):
     joblib.dump(model, file_name)
 
-def save_decision_tree_as_png(tree, feature_names, class_names, file_name):
+def save_decision_tree_as_png(tree, feature_names, class_names, file_name, max_depth=None):
     plt.figure(figsize=(20,10))
     plot_tree(
         tree,
@@ -46,8 +46,10 @@ def save_decision_tree_as_png(tree, feature_names, class_names, file_name):
         filled=True,
         rounded=True,
         proportion=True,
-        fontsize=10
+        fontsize=6,  # Mengurangi ukuran font agar tidak bertumpuk
+        max_depth=max_depth  # Menambahkan parameter max_depth untuk mengatur kedalaman tree
     )
+    plt.tight_layout()  # Menambahkan tight_layout untuk mengatur tata letak agar tidak saling menimpa
     plt.savefig(file_name)
     plt.close()
 
@@ -185,14 +187,14 @@ def index():
 
 @app.route('/view_training_data')
 def view_training_data():
-    latih_path = 'data/data_latih.xlsx'
+    latih_path = '../data_latih.xlsx'
     data_latih = load_data_latih(latih_path)
     data_html = data_latih.to_html(classes='table table-striped table-bordered', index=False)
     return render_template('view_data.html', data_table=data_html)
 
 @app.route('/view_test_data')
 def view_test_data():
-    uji_path = 'data/data_uji.xlsx'
+    uji_path = '../data_uji.xlsx'
     data_latih = load_data_uji(uji_path)
     data_html = data_latih.to_html(classes='table table-striped table-bordered', index=False)
     return render_template('view_data.html', data_table=data_html)
@@ -274,7 +276,7 @@ def predict_route():
 # Training
 @app.route('/train', methods=['GET'])
 def train_route():
-    latih_path = 'data/data_latih.xlsx'
+    latih_path = '../data_latih.xlsx'
     model_file_path = 'rf_model.pkl'
     
     # Logging steps
