@@ -30,7 +30,7 @@ def prepare_training_data(data_latih):
     return X_train, y_train, feature_names
 
 def train_random_forest(X_train, y_train):
-    rf_model = RandomForestClassifier(n_estimators=100, random_state=50)
+    rf_model = RandomForestClassifier(n_estimators=200, random_state=50)
     rf_model.fit(X_train, y_train)
     return rf_model
 
@@ -62,11 +62,19 @@ def format_rule(path, class_names):
         else:
             condition = f"{p[0]} {p[1]} {p[2]}" if not isinstance(p[2], bool) else f"{p[0]} IS {'TRUE' if p[2] else 'FALSE'}"
             if i > 0 and path[i-1][0] != "leaf":
-                rule.append(f"{indent}DAN JIKA {condition}")
+                rule.append(f"{indent}DAN {condition}")
             else:
                 rule.append(f"{indent}JIKA {condition}")
-            indent += "    "
+            
+            # Check for the next condition to append "JIKA TIDAK MAKA"
+            if i < len(path) - 1 and path[i + 1][0] != "leaf" and path[i + 1][1] == p[1] and path[i + 1][2] != p[2]:
+                rule.append(f"{indent}JIKA TIDAK MAKA {path[i + 1][0]} {path[i + 1][1]} {path[i + 1][2]}")
+                indent += "    "
+                i += 1  # Skip the next condition as it has already been included in the rule
+            else:
+                indent += "    "
     return "\n".join(rule)
+
 
 
 def extract_rules(tree, feature_names, class_names):
@@ -141,6 +149,7 @@ def generate_log():
 
         yield "data: Saved all rules.\n\n"
     return Response(stream_with_context(log_stream()), content_type='text/event-stream')
+
 
 
 def save_rules(rules, file_name):

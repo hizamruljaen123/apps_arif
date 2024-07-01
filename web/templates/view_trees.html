@@ -137,57 +137,59 @@
       $(document).ready(function() {
         let totalSteps = 0;
         let currentStep = 0;
-
+    
         $('.zoomable').on('click', function() {
           var src = $(this).data('src');
           $('#modalImage').attr('src', src);
         });
-
+    
         $('#confirmExtractButton').on('click', function() {
           $('#confirmModal').modal('show');
         });
-
+    
         $('#extractButton').on('click', function() {
           $('#confirmModal').modal('hide');
           $('#progressModal').modal('show');
           $('#logContainer').html('<p>Extraction started...</p>');
           $('#progressBar').css('width', '0%').attr('aria-valuenow', 0);
-
+    
           // Initialize steps for progress bar calculation
           totalSteps = 0;
           currentStep = 0;
-
+    
           // Perform extraction process
           const eventSource = new EventSource('/extract_and_log');
           eventSource.onmessage = function(e) {
             $('#logContainer').append('<p>' + e.data + '</p>');
-
+            $('#logContainer').scrollTop($('#logContainer')[0].scrollHeight); // Auto-scroll to the bottom
+    
             if (e.data.includes('Saved decision tree') || e.data.includes('Extracted rules for tree')) {
               currentStep++;
               updateProgressBar();
             }
-
+    
             if (e.data.includes('Starting extraction of decision trees...')) {
               totalSteps = parseInt(e.data.split('...')[1]); // Assume the total number of steps is included in the log
             }
-
+    
             if (e.data.includes('Saved decision tree')) {
               loadImages();
             }
           };
-
+    
           eventSource.onerror = function() {
             eventSource.close();
             $('#logContainer').append('<p>Extraction completed.</p>');
+            $('#logContainer').scrollTop($('#logContainer')[0].scrollHeight); // Auto-scroll to the bottom
             updateProgressBar(true);
           };
         });
-
+    
         function updateProgressBar(forceComplete = false) {
           let progress = forceComplete ? 100 : (currentStep / totalSteps) * 100;
           $('#progressBar').css('width', progress + '%').attr('aria-valuenow', progress);
         }
-
+    
         function loadImages() {
           $.ajax({
             url: '/view_trees',
@@ -206,7 +208,7 @@
                   </div>
                 `);
               });
-
+    
               // Reattach zoomable event to new images
               $('.zoomable').on('click', function() {
                 var src = $(this).data('src');
@@ -215,10 +217,12 @@
             },
             error: function(xhr) {
               $('#logContainer').append('<p>Error: ' + xhr.responseText + '</p>');
+              $('#logContainer').scrollTop($('#logContainer')[0].scrollHeight); // Auto-scroll to the bottom
             }
           });
         }
       });
     </script>
+    
   </body>
 </html>
