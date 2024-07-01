@@ -173,7 +173,7 @@ def make_predictions(model, X_test):
 def save_prediction_results(kecamatan, y_pred, file_name):
     results = pd.DataFrame({
         'Kecamatan': kecamatan,
-        'Prediksi Banjir': y_pred
+        'Prediksi': y_pred
     })
     results.to_excel(file_name, index=False)
     return results
@@ -263,13 +263,13 @@ def decision_tree_file(filename):
 
 @app.route('/predict', methods=['GET'])
 def predict_route():
-    uji_path = 'data/data_uji.xlsx'
+    uji_path = '../data_uji.xlsx'
     _, data_uji = load_data(uji_path, uji_path)
     X_test, kecamatan, latitude, longitude = prepare_testing_data(data_uji)
     rf_model = joblib.load('rf_model.pkl')
     y_pred = make_predictions(rf_model, X_test)
-    prediction_results = save_prediction_results(kecamatan, y_pred, 'prediction_results.xlsx')
-    return jsonify(prediction_results.head().to_dict())
+    prediction_results = save_prediction_results(kecamatan, y_pred, '../hasil_prediksi.xlsx')
+    return jsonify(prediction_results.to_dict())
 
 # Training
 @app.route('/train', methods=['GET'])
