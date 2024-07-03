@@ -1,4 +1,12 @@
-IF True AND Tinggi Muka Air Sungai (m) <= 2.95 AND Tinggi Muka Air Sungai (m) <= 2.45 THEN Aman
-IF True AND Tinggi Muka Air Sungai (m) <= 2.95 AND Tinggi Muka Air Sungai (m) > 2.45 THEN Waspada
-IF True AND Tinggi Muka Air Sungai (m) > 2.95 AND Curah Hujan (mm/hari) <= 70.00 THEN Siaga
-IF True AND Tinggi Muka Air Sungai (m) > 2.95 AND Curah Hujan (mm/hari) > 70.00 THEN Awas
+IF True AND Tinggi Muka Air Sungai (m) <= 3.00 AND Curah Hujan (mm/hari) <= 13.36 THEN Aman
+IF True AND Tinggi Muka Air Sungai (m) <= 3.00 AND Curah Hujan (mm/hari) > 13.36 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) > 3.00 AND Curah Hujan (mm/hari) <= 68.96 AND Curah Hujan (mm/hari) <= 22.21 THEN Aman
+IF True AND Tinggi Muka Air Sungai (m) > 3.00 AND Curah Hujan (mm/hari) <= 68.96 AND Curah Hujan (mm/hari) > 22.21 AND Suhu (°C) <= 27.73 AND Curah Hujan (mm/hari) <= 45.72 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) > 3.00 AND Curah Hujan (mm/hari) <= 68.96 AND Curah Hujan (mm/hari) > 22.21 AND Suhu (°C) <= 27.73 AND Curah Hujan (mm/hari) > 45.72 THEN Siaga
+IF True AND Tinggi Muka Air Sungai (m) > 3.00 AND Curah Hujan (mm/hari) <= 68.96 AND Curah Hujan (mm/hari) > 22.21 AND Suhu (°C) > 27.73 AND Curah Hujan (mm/hari) <= 47.44 AND Curah Hujan (mm/hari) <= 44.20 AND Ketinggian Air Tanah (m) <= 2.06 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) > 3.00 AND Curah Hujan (mm/hari) <= 68.96 AND Curah Hujan (mm/hari) > 22.21 AND Suhu (°C) > 27.73 AND Curah Hujan (mm/hari) <= 47.44 AND Curah Hujan (mm/hari) <= 44.20 AND Ketinggian Air Tanah (m) > 2.06 AND Ketinggian Air Tanah (m) <= 2.17 THEN Siaga
+IF True AND Tinggi Muka Air Sungai (m) > 3.00 AND Curah Hujan (mm/hari) <= 68.96 AND Curah Hujan (mm/hari) > 22.21 AND Suhu (°C) > 27.73 AND Curah Hujan (mm/hari) <= 47.44 AND Curah Hujan (mm/hari) <= 44.20 AND Ketinggian Air Tanah (m) > 2.06 AND Ketinggian Air Tanah (m) > 2.17 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) > 3.00 AND Curah Hujan (mm/hari) <= 68.96 AND Curah Hujan (mm/hari) > 22.21 AND Suhu (°C) > 27.73 AND Curah Hujan (mm/hari) <= 47.44 AND Curah Hujan (mm/hari) > 44.20 THEN Siaga
+IF True AND Tinggi Muka Air Sungai (m) > 3.00 AND Curah Hujan (mm/hari) <= 68.96 AND Curah Hujan (mm/hari) > 22.21 AND Suhu (°C) > 27.73 AND Curah Hujan (mm/hari) > 47.44 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) > 3.00 AND Curah Hujan (mm/hari) > 68.96 AND Kecepatan Angin (km/jam) <= 12.35 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) > 3.00 AND Curah Hujan (mm/hari) > 68.96 AND Kecepatan Angin (km/jam) > 12.35 THEN Awas

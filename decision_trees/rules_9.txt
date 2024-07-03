@@ -1,4 +1,19 @@
-IF True AND Tinggi Muka Air Sungai (m) <= 2.50 THEN Aman
-IF True AND Tinggi Muka Air Sungai (m) > 2.50 AND Curah Hujan (mm/hari) <= 37.50 THEN Waspada
-IF True AND Tinggi Muka Air Sungai (m) > 2.50 AND Curah Hujan (mm/hari) > 37.50 AND Tinggi Muka Air Sungai (m) <= 3.35 THEN Siaga
-IF True AND Tinggi Muka Air Sungai (m) > 2.50 AND Curah Hujan (mm/hari) > 37.50 AND Tinggi Muka Air Sungai (m) > 3.35 THEN Awas
+IF True AND Tinggi Muka Air Sungai (m) <= 3.10 AND Curah Hujan (mm/hari) <= 13.36 THEN Aman
+IF True AND Tinggi Muka Air Sungai (m) <= 3.10 AND Curah Hujan (mm/hari) > 13.36 AND Tinggi Muka Air Sungai (m) <= 3.00 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) <= 3.10 AND Curah Hujan (mm/hari) > 13.36 AND Tinggi Muka Air Sungai (m) > 3.00 AND Ketinggian Air Tanah (m) <= 1.94 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) <= 3.10 AND Curah Hujan (mm/hari) > 13.36 AND Tinggi Muka Air Sungai (m) > 3.00 AND Ketinggian Air Tanah (m) > 1.94 AND Kelembaban (%) <= 82.79 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) <= 3.10 AND Curah Hujan (mm/hari) > 13.36 AND Tinggi Muka Air Sungai (m) > 3.00 AND Ketinggian Air Tanah (m) > 1.94 AND Kelembaban (%) > 82.79 THEN Siaga
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) <= 3.79 AND Suhu (°C) <= 28.49 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) <= 3.79 AND Suhu (°C) > 28.49 AND Curah Hujan (mm/hari) <= 74.55 AND Suhu (°C) <= 30.05 AND Kelembaban (%) <= 85.92 THEN Siaga
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) <= 3.79 AND Suhu (°C) > 28.49 AND Curah Hujan (mm/hari) <= 74.55 AND Suhu (°C) <= 30.05 AND Kelembaban (%) > 85.92 THEN Aman
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) <= 3.79 AND Suhu (°C) > 28.49 AND Curah Hujan (mm/hari) <= 74.55 AND Suhu (°C) > 30.05 AND Suhu (°C) <= 33.10 AND Kelembaban (%) <= 81.66 AND Tinggi Muka Air Sungai (m) <= 3.43 THEN Siaga
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) <= 3.79 AND Suhu (°C) > 28.49 AND Curah Hujan (mm/hari) <= 74.55 AND Suhu (°C) > 30.05 AND Suhu (°C) <= 33.10 AND Kelembaban (%) <= 81.66 AND Tinggi Muka Air Sungai (m) > 3.43 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) <= 3.79 AND Suhu (°C) > 28.49 AND Curah Hujan (mm/hari) <= 74.55 AND Suhu (°C) > 30.05 AND Suhu (°C) <= 33.10 AND Kelembaban (%) > 81.66 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) <= 3.79 AND Suhu (°C) > 28.49 AND Curah Hujan (mm/hari) <= 74.55 AND Suhu (°C) > 30.05 AND Suhu (°C) > 33.10 AND Tinggi Muka Air Sungai (m) <= 3.44 THEN Siaga
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) <= 3.79 AND Suhu (°C) > 28.49 AND Curah Hujan (mm/hari) <= 74.55 AND Suhu (°C) > 30.05 AND Suhu (°C) > 33.10 AND Tinggi Muka Air Sungai (m) > 3.44 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) <= 3.79 AND Suhu (°C) > 28.49 AND Curah Hujan (mm/hari) > 74.55 AND Suhu (°C) <= 29.66 AND Kelembaban (%) <= 81.08 THEN Waspada
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) <= 3.79 AND Suhu (°C) > 28.49 AND Curah Hujan (mm/hari) > 74.55 AND Suhu (°C) <= 29.66 AND Kelembaban (%) > 81.08 THEN Awas
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) <= 3.79 AND Suhu (°C) > 28.49 AND Curah Hujan (mm/hari) > 74.55 AND Suhu (°C) > 29.66 THEN Awas
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) > 3.79 AND Suhu (°C) <= 27.29 THEN Siaga
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) > 3.79 AND Suhu (°C) > 27.29 AND Kecepatan Angin (km/jam) <= 10.17 THEN Siaga
+IF True AND Tinggi Muka Air Sungai (m) > 3.10 AND Tinggi Muka Air Sungai (m) > 3.79 AND Suhu (°C) > 27.29 AND Kecepatan Angin (km/jam) > 10.17 THEN Aman

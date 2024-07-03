@@ -1,4 +1,17 @@
-IF True AND Ketinggian Air Tanah (m) <= 2.25 AND Tinggi Muka Air Sungai (m) <= 2.35 THEN Aman
-IF True AND Ketinggian Air Tanah (m) <= 2.25 AND Tinggi Muka Air Sungai (m) > 2.35 AND Tinggi Muka Air Sungai (m) <= 2.95 THEN Waspada
-IF True AND Ketinggian Air Tanah (m) <= 2.25 AND Tinggi Muka Air Sungai (m) > 2.35 AND Tinggi Muka Air Sungai (m) > 2.95 THEN Siaga
-IF True AND Ketinggian Air Tanah (m) > 2.25 THEN Awas
+IF True AND Kelembaban (%) <= 78.90 AND Kelembaban (%) <= 70.36 THEN Aman
+IF True AND Kelembaban (%) <= 78.90 AND Kelembaban (%) > 70.36 AND Curah Hujan (mm/hari) <= 17.11 THEN Aman
+IF True AND Kelembaban (%) <= 78.90 AND Kelembaban (%) > 70.36 AND Curah Hujan (mm/hari) > 17.11 THEN Waspada
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) <= 20.80 THEN Aman
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) <= 92.58 AND Curah Hujan (mm/hari) <= 38.89 THEN Waspada
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) <= 92.58 AND Curah Hujan (mm/hari) > 38.89 AND Curah Hujan (mm/hari) <= 69.26 AND Kecepatan Angin (km/jam) <= 16.19 AND Kecepatan Angin (km/jam) <= 6.66 THEN Waspada
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) <= 92.58 AND Curah Hujan (mm/hari) > 38.89 AND Curah Hujan (mm/hari) <= 69.26 AND Kecepatan Angin (km/jam) <= 16.19 AND Kecepatan Angin (km/jam) > 6.66 AND Tinggi Muka Air Sungai (m) <= 2.64 THEN Waspada
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) <= 92.58 AND Curah Hujan (mm/hari) > 38.89 AND Curah Hujan (mm/hari) <= 69.26 AND Kecepatan Angin (km/jam) <= 16.19 AND Kecepatan Angin (km/jam) > 6.66 AND Tinggi Muka Air Sungai (m) > 2.64 THEN Siaga
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) <= 92.58 AND Curah Hujan (mm/hari) > 38.89 AND Curah Hujan (mm/hari) <= 69.26 AND Kecepatan Angin (km/jam) > 16.19 THEN Waspada
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) <= 92.58 AND Curah Hujan (mm/hari) > 38.89 AND Curah Hujan (mm/hari) > 69.26 AND Ketinggian Air Tanah (m) <= 2.41 AND Ketinggian Air Tanah (m) <= 2.39 AND Ketinggian Air Tanah (m) <= 2.22 THEN Waspada
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) <= 92.58 AND Curah Hujan (mm/hari) > 38.89 AND Curah Hujan (mm/hari) > 69.26 AND Ketinggian Air Tanah (m) <= 2.41 AND Ketinggian Air Tanah (m) <= 2.39 AND Ketinggian Air Tanah (m) > 2.22 AND Curah Hujan (mm/hari) <= 85.52 THEN Awas
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) <= 92.58 AND Curah Hujan (mm/hari) > 38.89 AND Curah Hujan (mm/hari) > 69.26 AND Ketinggian Air Tanah (m) <= 2.41 AND Ketinggian Air Tanah (m) <= 2.39 AND Ketinggian Air Tanah (m) > 2.22 AND Curah Hujan (mm/hari) > 85.52 THEN Waspada
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) <= 92.58 AND Curah Hujan (mm/hari) > 38.89 AND Curah Hujan (mm/hari) > 69.26 AND Ketinggian Air Tanah (m) <= 2.41 AND Ketinggian Air Tanah (m) > 2.39 THEN Awas
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) <= 92.58 AND Curah Hujan (mm/hari) > 38.89 AND Curah Hujan (mm/hari) > 69.26 AND Ketinggian Air Tanah (m) > 2.41 THEN Waspada
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) > 92.58 AND Kecepatan Angin (km/jam) <= 22.56 AND Tinggi Muka Air Sungai (m) <= 2.55 THEN Waspada
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) > 92.58 AND Kecepatan Angin (km/jam) <= 22.56 AND Tinggi Muka Air Sungai (m) > 2.55 THEN Awas
+IF True AND Kelembaban (%) > 78.90 AND Curah Hujan (mm/hari) > 20.80 AND Curah Hujan (mm/hari) > 92.58 AND Kecepatan Angin (km/jam) > 22.56 THEN Waspada
