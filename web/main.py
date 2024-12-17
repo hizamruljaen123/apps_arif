@@ -11,6 +11,22 @@ import time
 
 app = Flask(__name__)
 
+# Pemetaan header untuk training dan test data
+training_header_mapping = {
+    'Wilayah': 'Kecamatan',
+    'Latitude': 'Latitude',
+    'Longitude': 'Longitude',
+    'Curah Hujan (mm/hari)': 'Curah Hujan',
+    'Suhu (°C)': 'Suhu',
+    'Kelembaban (%)': 'Kelembaban',
+    'Kecepatan Angin (km/jam)': 'Kecepatan Angin',
+    'Tinggi Muka Air Sungai (m)': 'Tinggi Air Sungai',
+    'Ketinggian Air Tanah (m)': 'Ketinggian Air Tanah',
+    'Banjir Historis': 'Banjir Historis'
+}
+
+test_header_mapping = training_header_mapping  # Jika header sama, gunakan pemetaan yang sama
+
 # Helper functions
 def load_data(latih_path, uji_path):
     data_latih = pd.read_excel(latih_path)
@@ -193,7 +209,6 @@ def save_prediction_results(kecamatan, y_pred, file_name):
 @app.route('/')
 def index():
     return render_template('index.html')
-
 @app.route('/view_training_data')
 def view_training_data():
     latih_path = '../data_latih.xlsx'
@@ -203,10 +218,19 @@ def view_training_data():
 
 @app.route('/view_test_data')
 def view_test_data():
+    # Load data test
     uji_path = '../data_uji.xlsx'
-    data_latih = load_data_uji(uji_path)
-    data_html = data_latih.to_html(classes='table table-striped table-bordered', index=False)
+    data_uji = load_data_uji(uji_path)
+
+    # Rename kolom sesuai header_mapping dan filter kolom yang ditampilkan
+    data_renamed = data_uji.rename(columns={v: k for k, v in test_header_mapping.items()})
+    display_columns = list(test_header_mapping.keys())
+    data_final = data_renamed[display_columns]
+
+    # Konversi ke HTML
+    data_html = data_final.to_html(classes='table table-striped table-bordered', index=False)
     return render_template('view_data.html', data_table=data_html)
+
 
 @app.route('/save_decision_trees', methods=['GET'])
 def save_decision_trees_route():
@@ -331,7 +355,7 @@ def training_page():
 
 
 
-@app.route('/result')
+@app.route('/result', methods=['GET'])
 def view_result():
     # Load data
     data_uji = pd.read_excel('../data_uji.xlsx')
@@ -340,23 +364,55 @@ def view_result():
     # Merge data uji dengan hasil prediksi
     data_merged = pd.merge(data_uji, hasil_prediksi, on='Kecamatan')
 
-    # Calculate the bounds for the map view
+    # Hitung batas tampilan peta berdasarkan Latitude dan Longitude
     min_lat, max_lat = data_merged['Latitude'].min(), data_merged['Latitude'].max()
     min_lng, max_lng = data_merged['Longitude'].min(), data_merged['Longitude'].max()
 
-    # Convert merged data to a list of dictionaries for JavaScript
-    map_data = data_merged.to_dict(orient='records')
-
+    # Tambahkan tombol "View In Maps"
     data_merged['View In Maps'] = data_merged.apply(
         lambda row: f'<button class="view-in-maps btn btn-primary btn-sm" data-lat="{row.Latitude}" data-lng="{row.Longitude}">View In Maps</button>',
         axis=1
     )
-    data_table = data_merged.to_html(classes='table table-striped table-bordered', index=False, escape=False, table_id="dataTable")
 
-    # Send data to the HTML template
-    return render_template('view_result.html', map_data=map_data, 
+    # Daftar header yang diinginkan
+    header_labels = {
+        'Kecamatan': 'Wilayah',
+        'Latitude': 'Latitude',
+        'Longitude': 'Longitude',
+        'Curah Hujan': 'Curah Hujan (mm/hari)',
+        'Suhu': 'Suhu (°C)',
+        'Kelembaban': 'Kelembaban (%)',
+        'Kecepatan Angin': 'Kecepatan Angin (km/jam)',
+        'Tinggi Air Sungai': 'Tinggi Muka Air Sungai (m)',
+        'Ketinggian Air Tanah': 'Ketinggian Air Tanah (m)',
+        'Banjir Historis': 'Banjir Historis',
+        'View In Maps': 'View In Maps'
+    }
+
+    # Konversi data ke tabel HTML dengan mengganti header
+    data_table = data_merged.to_html(
+        classes='table table-striped table-bordered',
+        index=False, 
+        escape=False, 
+        table_id="dataTable",
+        header=True
+    )
+
+    # Ganti header HTML secara manual sesuai pemetaan
+    for original, new_label in header_labels.items():
+        data_table = data_table.replace(f'<th>{original}</th>', f'<th>{new_label}</th>')
+
+    # Konversi data ke format untuk JavaScript
+    map_data = data_merged.to_dict(orient='records')
+
+    # Render template HTML
+    return render_template('view_result.html', 
+                           map_data=map_data, 
                            min_latitude=min_lat, max_latitude=max_lat,
-                           min_longitude=min_lng, max_longitude=max_lng, data_table=data_table)
+                           min_longitude=min_lng, max_longitude=max_lng, 
+                           data_table=data_table)
+
+
 
 
 if __name__ == '__main__':
